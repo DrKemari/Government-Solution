@@ -1,0 +1,69 @@
+#pragma warning disable AA0005, AA0008, AA0018, AA0021, AA0072, AA0137, AA0201, AA0206, AA0218, AA0228, AL0254, AL0424, AS0011, AW0006 // ForNAV settings
+#pragma implicitwith disable
+Page 59126 "Failed Vehicle Inspection List"
+{
+    ApplicationArea = Basic;
+    CardPageID = "Vehicle Inspection Card";
+    PageType = List;
+    SourceTable = "Vehicle Inspection";
+    SourceTableView = where("Inspection Status" = const(Failed),
+                            Posted = const(true));
+    UsageCategory = Tasks;
+
+    layout
+    {
+        area(content)
+        {
+            repeater(Group)
+            {
+                field("Inspection No."; Rec."Inspection No.")
+                {
+                    ApplicationArea = Basic;
+                    ToolTip = 'Specifies the value of the Inspection No. field.';
+                }
+                field("Registration No."; Rec."Registration No.")
+                {
+                    ApplicationArea = Basic;
+                    ToolTip = 'Specifies the value of the Registration No. field.';
+                }
+                field(Type; Rec.Type)
+                {
+                    ApplicationArea = Basic;
+                    ToolTip = 'Specifies the value of the Type field.';
+                }
+                field(Make; Rec.Make)
+                {
+                    ApplicationArea = Basic;
+                    ToolTip = 'Specifies the value of the Make field.';
+                }
+                field(Model; Rec.Model)
+                {
+                    ApplicationArea = Basic;
+                    ToolTip = 'Specifies the value of the Model field.';
+                }
+                field("Inspection Date"; Rec."Inspection Date")
+                {
+                    ApplicationArea = Basic;
+                    ToolTip = 'Specifies the value of the Inspection Date field.';
+                }
+                field("Inspection Center"; Rec."Inspection Center")
+                {
+                    ApplicationArea = Basic;
+                    ToolTip = 'Specifies the value of the Inspection Center field.';
+                }
+                field(Amount; Rec.Amount)
+                {
+                    ApplicationArea = Basic;
+                    ToolTip = 'Specifies the value of the Amount field.';
+                }
+            }
+        }
+    }
+
+    actions
+    {
+    }
+}
+
+#pragma implicitwith restore
+

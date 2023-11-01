@@ -1,0 +1,446 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="ReportForNavId_1">
+          <DataField>ReportForNavId_1</DataField>
+        </Field>
+        <Field Name="No_StudentProcessingHeader">
+          <DataField>No_StudentProcessingHeader</DataField>
+        </Field>
+        <Field Name="AMOUNT">
+          <DataField>AMOUNT</DataField>
+        </Field>
+        <Field Name="AMOUNTFormat">
+          <DataField>AMOUNTFormat</DataField>
+        </Field>
+        <Field Name="Date_StudentProcessingHeader">
+          <DataField>Date_StudentProcessingHeader</DataField>
+        </Field>
+        <Field Name="DocumentType_StudentProcessingHeader">
+          <DataField>DocumentType_StudentProcessingHeader</DataField>
+        </Field>
+        <Field Name="StudentNo_StudentProcessingHeader">
+          <DataField>StudentNo_StudentProcessingHeader</DataField>
+        </Field>
+        <Field Name="StudentName_StudentProcessingHeader">
+          <DataField>StudentName_StudentProcessingHeader</DataField>
+        </Field>
+        <Field Name="FirstName_StudentProcessingHeader">
+          <DataField>FirstName_StudentProcessingHeader</DataField>
+        </Field>
+        <Field Name="MiddleName_StudentProcessingHeader">
+          <DataField>MiddleName_StudentProcessingHeader</DataField>
+        </Field>
+        <Field Name="Surname_StudentProcessingHeader">
+          <DataField>Surname_StudentProcessingHeader</DataField>
+        </Field>
+        <Field Name="IDNumber_StudentProcessingHeader">
+          <DataField>IDNumber_StudentProcessingHeader</DataField>
+        </Field>
+        <Field Name="CourseID_StudentProcessingHeader">
+          <DataField>CourseID_StudentProcessingHeader</DataField>
+        </Field>
+        <Field Name="CourseDescription_StudentProcessingHeader">
+          <DataField>CourseDescription_StudentProcessingHeader</DataField>
+        </Field>
+        <Field Name="ExaminationCenterCode_StudentProcessingHeader">
+          <DataField>ExaminationCenterCode_StudentProcessingHeader</DataField>
+        </Field>
+        <Field Name="ExaminationCenter_StudentProcessingHeader">
+          <DataField>ExaminationCenter_StudentProcessingHeader</DataField>
+        </Field>
+        <Field Name="HighestAcademicQCode_StudentProcessingHeader">
+          <DataField>HighestAcademicQCode_StudentProcessingHeader</DataField>
+        </Field>
+        <Field Name="HighestAcademicQualification_StudentProcessingHeader">
+          <DataField>HighestAcademicQualification_StudentProcessingHeader</DataField>
+        </Field>
+        <Field Name="Gender_StudentProcessingHeader">
+          <DataField>Gender_StudentProcessingHeader</DataField>
+        </Field>
+        <Field Name="DateofBirth_StudentProcessingHeader">
+          <DataField>DateofBirth_StudentProcessingHeader</DataField>
+        </Field>
+        <Field Name="Disabled_StudentProcessingHeader">
+          <DataField>Disabled_StudentProcessingHeader</DataField>
+        </Field>
+        <Field Name="NCPWDNo_StudentProcessingHeader">
+          <DataField>NCPWDNo_StudentProcessingHeader</DataField>
+        </Field>
+        <Field Name="RegistrationDate_StudentProcessingHeader">
+          <DataField>RegistrationDate_StudentProcessingHeader</DataField>
+        </Field>
+        <Field Name="CreatedBy_StudentProcessingHeader">
+          <DataField>CreatedBy_StudentProcessingHeader</DataField>
+        </Field>
+        <Field Name="CreatedOn_StudentProcessingHeader">
+          <DataField>CreatedOn_StudentProcessingHeader</DataField>
+        </Field>
+        <Field Name="ApprovalStatus_StudentProcessingHeader">
+          <DataField>ApprovalStatus_StudentProcessingHeader</DataField>
+        </Field>
+        <Field Name="CurrencyCode_StudentProcessingHeader">
+          <DataField>CurrencyCode_StudentProcessingHeader</DataField>
+        </Field>
+        <Field Name="Address_StudentProcessingHeader">
+          <DataField>Address_StudentProcessingHeader</DataField>
+        </Field>
+        <Field Name="Address2_StudentProcessingHeader">
+          <DataField>Address2_StudentProcessingHeader</DataField>
+        </Field>
+        <Field Name="City_StudentProcessingHeader">
+          <DataField>City_StudentProcessingHeader</DataField>
+        </Field>
+        <Field Name="CountryRegionCode_StudentProcessingHeader">
+          <DataField>CountryRegionCode_StudentProcessingHeader</DataField>
+        </Field>
+        <Field Name="PhoneNo_StudentProcessingHeader">
+          <DataField>PhoneNo_StudentProcessingHeader</DataField>
+        </Field>
+        <Field Name="PostCode_StudentProcessingHeader">
+          <DataField>PostCode_StudentProcessingHeader</DataField>
+        </Field>
+        <Field Name="County_StudentProcessingHeader">
+          <DataField>County_StudentProcessingHeader</DataField>
+        </Field>
+        <Field Name="Email_StudentProcessingHeader">
+          <DataField>Email_StudentProcessingHeader</DataField>
+        </Field>
+        <Field Name="NoSeries_StudentProcessingHeader">
+          <DataField>NoSeries_StudentProcessingHeader</DataField>
+        </Field>
+        <Field Name="Created_StudentProcessingHeader">
+          <DataField>Created_StudentProcessingHeader</DataField>
+        </Field>
+        <Field Name="Portal_StudentProcessingHeader">
+          <DataField>Portal_StudentProcessingHeader</DataField>
+        </Field>
+        <Field Name="ReasonforRejection_StudentProcessingHeader">
+          <DataField>ReasonforRejection_StudentProcessingHeader</DataField>
+        </Field>
+        <Field Name="Amount_StudentProcessingHeader">
+          <DataField>Amount_StudentProcessingHeader</DataField>
+        </Field>
+        <Field Name="Amount_StudentProcessingHeaderFormat">
+          <DataField>Amount_StudentProcessingHeaderFormat</DataField>
+        </Field>
+        <Field Name="ExaminationCyce_StudentProcessingHeader">
+          <DataField>ExaminationCyce_StudentProcessingHeader</DataField>
+        </Field>
+        <Field Name="Type_StudentProcessingHeader">
+          <DataField>Type_StudentProcessingHeader</DataField>
+        </Field>
+        <Field Name="RegistrationAmount_StudentProcessingHeader">
+          <DataField>RegistrationAmount_StudentProcessingHeader</DataField>
+        </Field>
+        <Field Name="RegistrationAmount_StudentProcessingHeaderFormat">
+          <DataField>RegistrationAmount_StudentProcessingHeaderFormat</DataField>
+        </Field>
+        <Field Name="RegistrationReceiptNo_StudentProcessingHeader">
+          <DataField>RegistrationReceiptNo_StudentProcessingHeader</DataField>
+        </Field>
+        <Field Name="BookingAmount_StudentProcessingHeader">
+          <DataField>BookingAmount_StudentProcessingHeader</DataField>
+        </Field>
+        <Field Name="BookingAmount_StudentProcessingHeaderFormat">
+          <DataField>BookingAmount_StudentProcessingHeaderFormat</DataField>
+        </Field>
+        <Field Name="BookingReceiptNo_StudentProcessingHeader">
+          <DataField>BookingReceiptNo_StudentProcessingHeader</DataField>
+        </Field>
+        <Field Name="ExemptionAmount_StudentProcessingHeader">
+          <DataField>ExemptionAmount_StudentProcessingHeader</DataField>
+        </Field>
+        <Field Name="ExemptionAmount_StudentProcessingHeaderFormat">
+          <DataField>ExemptionAmount_StudentProcessingHeaderFormat</DataField>
+        </Field>
+        <Field Name="ExemptionReceiptNo_StudentProcessingHeader">
+          <DataField>ExemptionReceiptNo_StudentProcessingHeader</DataField>
+        </Field>
+        <Field Name="RegistrationInvoiceNo_StudentProcessingHeader">
+          <DataField>RegistrationInvoiceNo_StudentProcessingHeader</DataField>
+        </Field>
+        <Field Name="BookingInvoiceNo_StudentProcessingHeader">
+          <DataField>BookingInvoiceNo_StudentProcessingHeader</DataField>
+        </Field>
+        <Field Name="ExemptionInvoiceNo_StudentProcessingHeader">
+          <DataField>ExemptionInvoiceNo_StudentProcessingHeader</DataField>
+        </Field>
+        <Field Name="StudentRegNo_StudentProcessingHeader">
+          <DataField>StudentRegNo_StudentProcessingHeader</DataField>
+        </Field>
+        <Field Name="Section_StudentProcessingHeader">
+          <DataField>Section_StudentProcessingHeader</DataField>
+        </Field>
+        <Field Name="Part_StudentProcessingHeader">
+          <DataField>Part_StudentProcessingHeader</DataField>
+        </Field>
+        <Field Name="Paper_StudentProcessingHeader">
+          <DataField>Paper_StudentProcessingHeader</DataField>
+        </Field>
+        <Field Name="WorkType_StudentProcessingHeader">
+          <DataField>WorkType_StudentProcessingHeader</DataField>
+        </Field>
+        <Field Name="Posted_StudentProcessingHeader">
+          <DataField>Posted_StudentProcessingHeader</DataField>
+        </Field>
+        <Field Name="TypeCode_StudentProcessingHeader">
+          <DataField>TypeCode_StudentProcessingHeader</DataField>
+        </Field>
+        <Field Name="ApplicationInvoice_StudentProcessingHeader">
+          <DataField>ApplicationInvoice_StudentProcessingHeader</DataField>
+        </Field>
+        <Field Name="ApplicationAmount_StudentProcessingHeader">
+          <DataField>ApplicationAmount_StudentProcessingHeader</DataField>
+        </Field>
+        <Field Name="ApplicationAmount_StudentProcessingHeaderFormat">
+          <DataField>ApplicationAmount_StudentProcessingHeaderFormat</DataField>
+        </Field>
+        <Field Name="ApplicationReceipt_StudentProcessingHeader">
+          <DataField>ApplicationReceipt_StudentProcessingHeader</DataField>
+        </Field>
+        <Field Name="TotalWithdrawalAmount_StudentProcessingHeader">
+          <DataField>TotalWithdrawalAmount_StudentProcessingHeader</DataField>
+        </Field>
+        <Field Name="TotalWithdrawalAmount_StudentProcessingHeaderFormat">
+          <DataField>TotalWithdrawalAmount_StudentProcessingHeaderFormat</DataField>
+        </Field>
+        <Field Name="PreferredExamCenter_StudentProcessingHeader">
+          <DataField>PreferredExamCenter_StudentProcessingHeader</DataField>
+        </Field>
+        <Field Name="PreferredExamCenterName_StudentProcessingHeader">
+          <DataField>PreferredExamCenterName_StudentProcessingHeader</DataField>
+        </Field>
+        <Field Name="WithdrawalApplicationNo_StudentProcessingHeader">
+          <DataField>WithdrawalApplicationNo_StudentProcessingHeader</DataField>
+        </Field>
+        <Field Name="Age_StudentProcessingHeader">
+          <DataField>Age_StudentProcessingHeader</DataField>
+        </Field>
+        <Field Name="WithdrawalCode_StudentProcessingHeader">
+          <DataField>WithdrawalCode_StudentProcessingHeader</DataField>
+        </Field>
+        <Field Name="WithdrawalReason_StudentProcessingHeader">
+          <DataField>WithdrawalReason_StudentProcessingHeader</DataField>
+        </Field>
+        <Field Name="Image_StudentProcessingHeader">
+          <DataField>Image_StudentProcessingHeader</DataField>
+        </Field>
+        <Field Name="PostedBy_StudentProcessingHeader">
+          <DataField>PostedBy_StudentProcessingHeader</DataField>
+        </Field>
+        <Field Name="PostedOn_StudentProcessingHeader">
+          <DataField>PostedOn_StudentProcessingHeader</DataField>
+        </Field>
+        <Field Name="ExaminationProjectCode_StudentProcessingHeader">
+          <DataField>ExaminationProjectCode_StudentProcessingHeader</DataField>
+        </Field>
+        <Field Name="ExaminationProjectName_StudentProcessingHeader">
+          <DataField>ExaminationProjectName_StudentProcessingHeader</DataField>
+        </Field>
+        <Field Name="WithdrawalRefundAmount_StudentProcessingHeader">
+          <DataField>WithdrawalRefundAmount_StudentProcessingHeader</DataField>
+        </Field>
+        <Field Name="WithdrawalRefundAmount_StudentProcessingHeaderFormat">
+          <DataField>WithdrawalRefundAmount_StudentProcessingHeaderFormat</DataField>
+        </Field>
+        <Field Name="DeffermentCharge_StudentProcessingHeader">
+          <DataField>DeffermentCharge_StudentProcessingHeader</DataField>
+        </Field>
+        <Field Name="DeffermentCharge_StudentProcessingHeaderFormat">
+          <DataField>DeffermentCharge_StudentProcessingHeaderFormat</DataField>
+        </Field>
+        <Field Name="TrainingInstitutionCode_StudentProcessingHeader">
+          <DataField>TrainingInstitutionCode_StudentProcessingHeader</DataField>
+        </Field>
+        <Field Name="CI_Picture">
+          <DataField>CI_Picture</DataField>
+        </Field>
+        <Field Name="CI_Address">
+          <DataField>CI_Address</DataField>
+        </Field>
+        <Field Name="CI__Address_2______CI__Post_Code_">
+          <DataField>CI__Address_2______CI__Post_Code_</DataField>
+        </Field>
+        <Field Name="CI_City">
+          <DataField>CI_City</DataField>
+        </Field>
+        <Field Name="CI_PhoneNo">
+          <DataField>CI_PhoneNo</DataField>
+        </Field>
+        <Field Name="COMPANYNAME">
+          <DataField>COMPANYNAME</DataField>
+        </Field>
+        <Field Name="TrainingInstitution_StudentProcessingHeader">
+          <DataField>TrainingInstitution_StudentProcessingHeader</DataField>
+        </Field>
+        <Field Name="ReportForNavId_76">
+          <DataField>ReportForNavId_76</DataField>
+        </Field>
+        <Field Name="PaperName">
+          <DataField>PaperName</DataField>
+        </Field>
+        <Field Name="EntryNo_CertificateCollectionEntry">
+          <DataField>EntryNo_CertificateCollectionEntry</DataField>
+        </Field>
+        <Field Name="StudentRegNo_CertificateCollectionEntry">
+          <DataField>StudentRegNo_CertificateCollectionEntry</DataField>
+        </Field>
+        <Field Name="StudentName_CertificateCollectionEntry">
+          <DataField>StudentName_CertificateCollectionEntry</DataField>
+        </Field>
+        <Field Name="Examination_CertificateCollectionEntry">
+          <DataField>Examination_CertificateCollectionEntry</DataField>
+        </Field>
+        <Field Name="Part_CertificateCollectionEntry">
+          <DataField>Part_CertificateCollectionEntry</DataField>
+        </Field>
+        <Field Name="ExamSittingID_CertificateCollectionEntry">
+          <DataField>ExamSittingID_CertificateCollectionEntry</DataField>
+        </Field>
+        <Field Name="ExamCenter_CertificateCollectionEntry">
+          <DataField>ExamCenter_CertificateCollectionEntry</DataField>
+        </Field>
+        <Field Name="DatePrinted_CertificateCollectionEntry">
+          <DataField>DatePrinted_CertificateCollectionEntry</DataField>
+        </Field>
+        <Field Name="PrintedBy_CertificateCollectionEntry">
+          <DataField>PrintedBy_CertificateCollectionEntry</DataField>
+        </Field>
+        <Field Name="CollectionDate_CertificateCollectionEntry">
+          <DataField>CollectionDate_CertificateCollectionEntry</DataField>
+        </Field>
+        <Field Name="CollectedByIDNumber_CertificateCollectionEntry">
+          <DataField>CollectedByIDNumber_CertificateCollectionEntry</DataField>
+        </Field>
+        <Field Name="CollectedByName_CertificateCollectionEntry">
+          <DataField>CollectedByName_CertificateCollectionEntry</DataField>
+        </Field>
+        <Field Name="CollectedByEmail_CertificateCollectionEntry">
+          <DataField>CollectedByEmail_CertificateCollectionEntry</DataField>
+        </Field>
+        <Field Name="IssuedBy_CertificateCollectionEntry">
+          <DataField>IssuedBy_CertificateCollectionEntry</DataField>
+        </Field>
+        <Field Name="IssuedDate_CertificateCollectionEntry">
+          <DataField>IssuedDate_CertificateCollectionEntry</DataField>
+        </Field>
+        <Field Name="IssuedTime_CertificateCollectionEntry">
+          <DataField>IssuedTime_CertificateCollectionEntry</DataField>
+        </Field>
+        <Field Name="Type_CertificateCollectionEntry">
+          <DataField>Type_CertificateCollectionEntry</DataField>
+        </Field>
+        <Field Name="LastModifiedDateTime_CertificateCollectionEntry">
+          <DataField>LastModifiedDateTime_CertificateCollectionEntry</DataField>
+        </Field>
+        <Field Name="LastDateModified_CertificateCollectionEntry">
+          <DataField>LastDateModified_CertificateCollectionEntry</DataField>
+        </Field>
+        <Field Name="CertificateNo_CertificateCollectionEntry">
+          <DataField>CertificateNo_CertificateCollectionEntry</DataField>
+        </Field>
+        <Field Name="Collected_CertificateCollectionEntry">
+          <DataField>Collected_CertificateCollectionEntry</DataField>
+        </Field>
+        <Field Name="StorageAmount_CertificateCollectionEntry">
+          <DataField>StorageAmount_CertificateCollectionEntry</DataField>
+        </Field>
+        <Field Name="StorageAmount_CertificateCollectionEntryFormat">
+          <DataField>StorageAmount_CertificateCollectionEntryFormat</DataField>
+        </Field>
+        <Field Name="Status_CertificateCollectionEntry">
+          <DataField>Status_CertificateCollectionEntry</DataField>
+        </Field>
+        <Field Name="SecurityCode_CertificateCollectionEntry">
+          <DataField>SecurityCode_CertificateCollectionEntry</DataField>
+        </Field>
+        <Field Name="StudentNo_CertificateCollectionEntry">
+          <DataField>StudentNo_CertificateCollectionEntry</DataField>
+        </Field>
+        <Field Name="DocumentNo_CertificateCollectionEntry">
+          <DataField>DocumentNo_CertificateCollectionEntry</DataField>
+        </Field>
+        <Field Name="CertificateEntryNo_CertificateCollectionEntry">
+          <DataField>CertificateEntryNo_CertificateCollectionEntry</DataField>
+        </Field>
+        <Field Name="CertificateIssuanceStatus_CertificateCollectionEntry">
+          <DataField>CertificateIssuanceStatus_CertificateCollectionEntry</DataField>
+        </Field>
+        <Field Name="ReasonForSuspension_CertificateCollectionEntry">
+          <DataField>ReasonForSuspension_CertificateCollectionEntry</DataField>
+        </Field>
+        <Field Name="YearCompleted_CertificateCollectionEntry">
+          <DataField>YearCompleted_CertificateCollectionEntry</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

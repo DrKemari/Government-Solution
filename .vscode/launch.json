@@ -1,0 +1,23 @@
+{
+    "version": "0.2.1",
+    "configurations": [
+        {
+            "name": "Your own server",
+            "request": "launch",
+            "type": "al",
+            "environmentType": "OnPrem",
+            "server": "http://localhost:8082/KETRB",
+            "serverInstance": "KETRB",
+            "authentication": "Windows",
+            "startupObjectId": 70119,
+            "startupObjectType": "Page",
+            "breakOnError": "All",
+            "launchBrowser": true,
+            "enableLongRunningSqlStatements": true,
+            "enableSqlInformationDebugger": true,
+            "tenant": "default",
+            "port": 7049,
+             "schemaUpdateMode":"ForceSync"
+        }
+    ]
+}

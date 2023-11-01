@@ -1,0 +1,275 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="ReportForNavId_35">
+          <DataField>ReportForNavId_35</DataField>
+        </Field>
+        <Field Name="eXAM">
+          <DataField>eXAM</DataField>
+        </Field>
+        <Field Name="Logo">
+          <DataField>Logo</DataField>
+        </Field>
+        <Field Name="DocumentNo_HD">
+          <DataField>DocumentNo_HD</DataField>
+        </Field>
+        <Field Name="Description_HD">
+          <DataField>Description_HD</DataField>
+        </Field>
+        <Field Name="ProjectNo_HD">
+          <DataField>ProjectNo_HD</DataField>
+        </Field>
+        <Field Name="ProjectName_HD">
+          <DataField>ProjectName_HD</DataField>
+        </Field>
+        <Field Name="SittingCycle_HD">
+          <DataField>SittingCycle_HD</DataField>
+        </Field>
+        <Field Name="CenterCode_HD">
+          <DataField>CenterCode_HD</DataField>
+        </Field>
+        <Field Name="CenterName_HD">
+          <DataField>CenterName_HD</DataField>
+        </Field>
+        <Field Name="ApprovalStatus_HD">
+          <DataField>ApprovalStatus_HD</DataField>
+        </Field>
+        <Field Name="DocumentStatus_HD">
+          <DataField>DocumentStatus_HD</DataField>
+        </Field>
+        <Field Name="CreatedBy_HD">
+          <DataField>CreatedBy_HD</DataField>
+        </Field>
+        <Field Name="CreatedOn_HD">
+          <DataField>CreatedOn_HD</DataField>
+        </Field>
+        <Field Name="Signature">
+          <DataField>Signature</DataField>
+        </Field>
+        <Field Name="Signature_Name">
+          <DataField>Signature_Name</DataField>
+        </Field>
+        <Field Name="Posted_HD">
+          <DataField>Posted_HD</DataField>
+        </Field>
+        <Field Name="PostedOn_HD">
+          <DataField>PostedOn_HD</DataField>
+        </Field>
+        <Field Name="PostedBy_HD">
+          <DataField>PostedBy_HD</DataField>
+        </Field>
+        <Field Name="NoSeries_HD">
+          <DataField>NoSeries_HD</DataField>
+        </Field>
+        <Field Name="ExaminationStartDate_HD">
+          <DataField>ExaminationStartDate_HD</DataField>
+        </Field>
+        <Field Name="ExaminationEndDate_HD">
+          <DataField>ExaminationEndDate_HD</DataField>
+        </Field>
+        <Field Name="TotalCandidature_HD">
+          <DataField>TotalCandidature_HD</DataField>
+        </Field>
+        <Field Name="DocumentType_HD">
+          <DataField>DocumentType_HD</DataField>
+        </Field>
+        <Field Name="MarkingStartDate_HD">
+          <DataField>MarkingStartDate_HD</DataField>
+        </Field>
+        <Field Name="MarkingEndDate_HD">
+          <DataField>MarkingEndDate_HD</DataField>
+        </Field>
+        <Field Name="Examination_HD">
+          <DataField>Examination_HD</DataField>
+        </Field>
+        <Field Name="PaperCode_HD">
+          <DataField>PaperCode_HD</DataField>
+        </Field>
+        <Field Name="PaperName_HD">
+          <DataField>PaperName_HD</DataField>
+        </Field>
+        <Field Name="MarkerNo_HD">
+          <DataField>MarkerNo_HD</DataField>
+        </Field>
+        <Field Name="MarkerName_HD">
+          <DataField>MarkerName_HD</DataField>
+        </Field>
+        <Field Name="ReportForNavId_27">
+          <DataField>ReportForNavId_27</DataField>
+        </Field>
+        <Field Name="Code_LN">
+          <DataField>Code_LN</DataField>
+        </Field>
+        <Field Name="Course_LN">
+          <DataField>Course_LN</DataField>
+        </Field>
+        <Field Name="Section_LN">
+          <DataField>Section_LN</DataField>
+        </Field>
+        <Field Name="Level_LN">
+          <DataField>Level_LN</DataField>
+        </Field>
+        <Field Name="Description_LN">
+          <DataField>Description_LN</DataField>
+        </Field>
+        <Field Name="NoofPassedStudents_LN">
+          <DataField>NoofPassedStudents_LN</DataField>
+        </Field>
+        <Field Name="NoofFailedStudents_LN">
+          <DataField>NoofFailedStudents_LN</DataField>
+        </Field>
+        <Field Name="Blocked_LN">
+          <DataField>Blocked_LN</DataField>
+        </Field>
+        <Field Name="Status_LN">
+          <DataField>Status_LN</DataField>
+        </Field>
+        <Field Name="Practical_LN">
+          <DataField>Practical_LN</DataField>
+        </Field>
+        <Field Name="DocumentNo_LN">
+          <DataField>DocumentNo_LN</DataField>
+        </Field>
+        <Field Name="MarkingStartDate_LN">
+          <DataField>MarkingStartDate_LN</DataField>
+        </Field>
+        <Field Name="MarkingEndDate_LN">
+          <DataField>MarkingEndDate_LN</DataField>
+        </Field>
+        <Field Name="CheckingStartDate_LN">
+          <DataField>CheckingStartDate_LN</DataField>
+        </Field>
+        <Field Name="CheckingEndDate_LN">
+          <DataField>CheckingEndDate_LN</DataField>
+        </Field>
+        <Field Name="EnteringStartDate_LN">
+          <DataField>EnteringStartDate_LN</DataField>
+        </Field>
+        <Field Name="EnteringEndDate_LN">
+          <DataField>EnteringEndDate_LN</DataField>
+        </Field>
+        <Field Name="ClearingMarkersStartDate_LN">
+          <DataField>ClearingMarkersStartDate_LN</DataField>
+        </Field>
+        <Field Name="ClearingMarkersEndDate_LN">
+          <DataField>ClearingMarkersEndDate_LN</DataField>
+        </Field>
+        <Field Name="ComparingStartDate_LN">
+          <DataField>ComparingStartDate_LN</DataField>
+        </Field>
+        <Field Name="ComparingEndDate_LN">
+          <DataField>ComparingEndDate_LN</DataField>
+        </Field>
+        <Field Name="ClearingPapersStartDate_LN">
+          <DataField>ClearingPapersStartDate_LN</DataField>
+        </Field>
+        <Field Name="ClearingPapersEndDate_LN">
+          <DataField>ClearingPapersEndDate_LN</DataField>
+        </Field>
+        <Field Name="PackingStartDate_LN">
+          <DataField>PackingStartDate_LN</DataField>
+        </Field>
+        <Field Name="PackingEndDate_LN">
+          <DataField>PackingEndDate_LN</DataField>
+        </Field>
+        <Field Name="KeyinginStartDate_LN">
+          <DataField>KeyinginStartDate_LN</DataField>
+        </Field>
+        <Field Name="KeyinginEndDate_LN">
+          <DataField>KeyinginEndDate_LN</DataField>
+        </Field>
+        <Field Name="ProofReadingStartDate_LN">
+          <DataField>ProofReadingStartDate_LN</DataField>
+        </Field>
+        <Field Name="ProofReadingEndDate_LN">
+          <DataField>ProofReadingEndDate_LN</DataField>
+        </Field>
+        <Field Name="LineNo_LN">
+          <DataField>LineNo_LN</DataField>
+        </Field>
+        <Field Name="V2ndProofReadingStartDate_LN">
+          <DataField>V2ndProofReadingStartDate_LN</DataField>
+        </Field>
+        <Field Name="V2ndProofReadingEndDate_LN">
+          <DataField>V2ndProofReadingEndDate_LN</DataField>
+        </Field>
+        <Field Name="ConfimofCorrStartDate_LN">
+          <DataField>ConfimofCorrStartDate_LN</DataField>
+        </Field>
+        <Field Name="ConfimofCorrEndDate_LN">
+          <DataField>ConfimofCorrEndDate_LN</DataField>
+        </Field>
+        <Field Name="ClearingTeamLeadersDate_LN">
+          <DataField>ClearingTeamLeadersDate_LN</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

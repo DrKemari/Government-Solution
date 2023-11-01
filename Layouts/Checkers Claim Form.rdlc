@@ -1,0 +1,311 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="ReportForNavId_35">
+          <DataField>ReportForNavId_35</DataField>
+        </Field>
+        <Field Name="eXAM">
+          <DataField>eXAM</DataField>
+        </Field>
+        <Field Name="CheckingAmount_HD">
+          <DataField>CheckingAmount_HD</DataField>
+        </Field>
+        <Field Name="CheckingAmount_HDFormat">
+          <DataField>CheckingAmount_HDFormat</DataField>
+        </Field>
+        <Field Name="TotalCheckingAmount_HD">
+          <DataField>TotalCheckingAmount_HD</DataField>
+        </Field>
+        <Field Name="TotalCheckingAmount_HDFormat">
+          <DataField>TotalCheckingAmount_HDFormat</DataField>
+        </Field>
+        <Field Name="Allowances_HD">
+          <DataField>Allowances_HD</DataField>
+        </Field>
+        <Field Name="Allowances_HDFormat">
+          <DataField>Allowances_HDFormat</DataField>
+        </Field>
+        <Field Name="TeamLeaderAmount_HD">
+          <DataField>TeamLeaderAmount_HD</DataField>
+        </Field>
+        <Field Name="TeamLeaderAmount_HDFormat">
+          <DataField>TeamLeaderAmount_HDFormat</DataField>
+        </Field>
+        <Field Name="Logo">
+          <DataField>Logo</DataField>
+        </Field>
+        <Field Name="name">
+          <DataField>name</DataField>
+        </Field>
+        <Field Name="city">
+          <DataField>city</DataField>
+        </Field>
+        <Field Name="Add2">
+          <DataField>Add2</DataField>
+        </Field>
+        <Field Name="DocumentNo_HD">
+          <DataField>DocumentNo_HD</DataField>
+        </Field>
+        <Field Name="Description_HD">
+          <DataField>Description_HD</DataField>
+        </Field>
+        <Field Name="ProjectNo_HD">
+          <DataField>ProjectNo_HD</DataField>
+        </Field>
+        <Field Name="ProjectName_HD">
+          <DataField>ProjectName_HD</DataField>
+        </Field>
+        <Field Name="SittingCycle_HD">
+          <DataField>SittingCycle_HD</DataField>
+        </Field>
+        <Field Name="CenterCode_HD">
+          <DataField>CenterCode_HD</DataField>
+        </Field>
+        <Field Name="CenterName_HD">
+          <DataField>CenterName_HD</DataField>
+        </Field>
+        <Field Name="ApprovalStatus_HD">
+          <DataField>ApprovalStatus_HD</DataField>
+        </Field>
+        <Field Name="DocumentStatus_HD">
+          <DataField>DocumentStatus_HD</DataField>
+        </Field>
+        <Field Name="CreatedBy_HD">
+          <DataField>CreatedBy_HD</DataField>
+        </Field>
+        <Field Name="CreatedOn_HD">
+          <DataField>CreatedOn_HD</DataField>
+        </Field>
+        <Field Name="Posted_HD">
+          <DataField>Posted_HD</DataField>
+        </Field>
+        <Field Name="PostedOn_HD">
+          <DataField>PostedOn_HD</DataField>
+        </Field>
+        <Field Name="PostedBy_HD">
+          <DataField>PostedBy_HD</DataField>
+        </Field>
+        <Field Name="NoSeries_HD">
+          <DataField>NoSeries_HD</DataField>
+        </Field>
+        <Field Name="ExaminationStartDate_HD">
+          <DataField>ExaminationStartDate_HD</DataField>
+        </Field>
+        <Field Name="ExaminationEndDate_HD">
+          <DataField>ExaminationEndDate_HD</DataField>
+        </Field>
+        <Field Name="TotalCandidature_HD">
+          <DataField>TotalCandidature_HD</DataField>
+        </Field>
+        <Field Name="DocumentType_HD">
+          <DataField>DocumentType_HD</DataField>
+        </Field>
+        <Field Name="MarkingStartDate_HD">
+          <DataField>MarkingStartDate_HD</DataField>
+        </Field>
+        <Field Name="MarkingEndDate_HD">
+          <DataField>MarkingEndDate_HD</DataField>
+        </Field>
+        <Field Name="Examination_HD">
+          <DataField>Examination_HD</DataField>
+        </Field>
+        <Field Name="PaperCode_HD">
+          <DataField>PaperCode_HD</DataField>
+        </Field>
+        <Field Name="PaperName_HD">
+          <DataField>PaperName_HD</DataField>
+        </Field>
+        <Field Name="MarkerNo_HD">
+          <DataField>MarkerNo_HD</DataField>
+        </Field>
+        <Field Name="MarkerName_HD">
+          <DataField>MarkerName_HD</DataField>
+        </Field>
+        <Field Name="DocumentDate_HD">
+          <DataField>DocumentDate_HD</DataField>
+        </Field>
+        <Field Name="ExaminationName_HD">
+          <DataField>ExaminationName_HD</DataField>
+        </Field>
+        <Field Name="BankName_HD">
+          <DataField>BankName_HD</DataField>
+        </Field>
+        <Field Name="BranchName_HD">
+          <DataField>BranchName_HD</DataField>
+        </Field>
+        <Field Name="BankBranchNo_HD">
+          <DataField>BankBranchNo_HD</DataField>
+        </Field>
+        <Field Name="BankAccountNo_HD">
+          <DataField>BankAccountNo_HD</DataField>
+        </Field>
+        <Field Name="BankCode_HD">
+          <DataField>BankCode_HD</DataField>
+        </Field>
+        <Field Name="MPesaNumber_HD">
+          <DataField>MPesaNumber_HD</DataField>
+        </Field>
+        <Field Name="Email_HD">
+          <DataField>Email_HD</DataField>
+        </Field>
+        <Field Name="IDPassportNo_HD">
+          <DataField>IDPassportNo_HD</DataField>
+        </Field>
+        <Field Name="KRAPINNO_HD">
+          <DataField>KRAPINNO_HD</DataField>
+        </Field>
+        <Field Name="Address_HD">
+          <DataField>Address_HD</DataField>
+        </Field>
+        <Field Name="Address2_HD">
+          <DataField>Address2_HD</DataField>
+        </Field>
+        <Field Name="PhoneNo_HD">
+          <DataField>PhoneNo_HD</DataField>
+        </Field>
+        <Field Name="TotalMarkingAmount_HD">
+          <DataField>TotalMarkingAmount_HD</DataField>
+        </Field>
+        <Field Name="TotalMarkingAmount_HDFormat">
+          <DataField>TotalMarkingAmount_HDFormat</DataField>
+        </Field>
+        <Field Name="TotalLunchAllowance_HD">
+          <DataField>TotalLunchAllowance_HD</DataField>
+        </Field>
+        <Field Name="TotalLunchAllowance_HDFormat">
+          <DataField>TotalLunchAllowance_HDFormat</DataField>
+        </Field>
+        <Field Name="TotalDaysPresent_HD">
+          <DataField>TotalDaysPresent_HD</DataField>
+        </Field>
+        <Field Name="DummyAmount_HD">
+          <DataField>DummyAmount_HD</DataField>
+        </Field>
+        <Field Name="DummyAmount_HDFormat">
+          <DataField>DummyAmount_HDFormat</DataField>
+        </Field>
+        <Field Name="MarksDistribution_HD">
+          <DataField>MarksDistribution_HD</DataField>
+        </Field>
+        <Field Name="MarkingScheme_HD">
+          <DataField>MarkingScheme_HD</DataField>
+        </Field>
+        <Field Name="ExaminerReport_HD">
+          <DataField>ExaminerReport_HD</DataField>
+        </Field>
+        <Field Name="ReportForNavId_27">
+          <DataField>ReportForNavId_27</DataField>
+        </Field>
+        <Field Name="DocumentNo_LN">
+          <DataField>DocumentNo_LN</DataField>
+        </Field>
+        <Field Name="Examination_LN">
+          <DataField>Examination_LN</DataField>
+        </Field>
+        <Field Name="PaperCode_LN">
+          <DataField>PaperCode_LN</DataField>
+        </Field>
+        <Field Name="PaperName_LN">
+          <DataField>PaperName_LN</DataField>
+        </Field>
+        <Field Name="ExaminationSitting_LN">
+          <DataField>ExaminationSitting_LN</DataField>
+        </Field>
+        <Field Name="CenterCode_LN">
+          <DataField>CenterCode_LN</DataField>
+        </Field>
+        <Field Name="CenterName_LN">
+          <DataField>CenterName_LN</DataField>
+        </Field>
+        <Field Name="MarkerNo_LN">
+          <DataField>MarkerNo_LN</DataField>
+        </Field>
+        <Field Name="MarkerName_LN">
+          <DataField>MarkerName_LN</DataField>
+        </Field>
+        <Field Name="NoofScriptsMarked_LN">
+          <DataField>NoofScriptsMarked_LN</DataField>
+        </Field>
+        <Field Name="Level_LN">
+          <DataField>Level_LN</DataField>
+        </Field>
+        <Field Name="NoofExpectedMarkedScripts_LN">
+          <DataField>NoofExpectedMarkedScripts_LN</DataField>
+        </Field>
+        <Field Name="Amount_LN">
+          <DataField>Amount_LN</DataField>
+        </Field>
+        <Field Name="Amount_LNFormat">
+          <DataField>Amount_LNFormat</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

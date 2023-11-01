@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="ReportForNavId_1">
+          <DataField>ReportForNavId_1</DataField>
+        </Field>
+        <Field Name="Logo">
+          <DataField>Logo</DataField>
+        </Field>
+        <Field Name="DocumentNo_CenterDispatchLines">
+          <DataField>DocumentNo_CenterDispatchLines</DataField>
+        </Field>
+        <Field Name="LineNo_CenterDispatchLines">
+          <DataField>LineNo_CenterDispatchLines</DataField>
+        </Field>
+        <Field Name="StationeryType_CenterDispatchLines">
+          <DataField>StationeryType_CenterDispatchLines</DataField>
+        </Field>
+        <Field Name="StationeryName_CenterDispatchLines">
+          <DataField>StationeryName_CenterDispatchLines</DataField>
+        </Field>
+        <Field Name="UnitofMeasure_CenterDispatchLines">
+          <DataField>UnitofMeasure_CenterDispatchLines</DataField>
+        </Field>
+        <Field Name="Quantity_CenterDispatchLines">
+          <DataField>Quantity_CenterDispatchLines</DataField>
+        </Field>
+        <Field Name="SerialNoFrom_CenterDispatchLines">
+          <DataField>SerialNoFrom_CenterDispatchLines</DataField>
+        </Field>
+        <Field Name="SerialNoTo_CenterDispatchLines">
+          <DataField>SerialNoTo_CenterDispatchLines</DataField>
+        </Field>
+        <Field Name="SerialNoFromReceived_CenterDispatchLines">
+          <DataField>SerialNoFromReceived_CenterDispatchLines</DataField>
+        </Field>
+        <Field Name="SerialNoToReceived_CenterDispatchLines">
+          <DataField>SerialNoToReceived_CenterDispatchLines</DataField>
+        </Field>
+        <Field Name="QuantityReceived_CenterDispatchLines">
+          <DataField>QuantityReceived_CenterDispatchLines</DataField>
+        </Field>
+        <Field Name="NoofEnvelopes_CenterDispatchLines">
+          <DataField>NoofEnvelopes_CenterDispatchLines</DataField>
+        </Field>
+        <Field Name="Examination_CenterDispatchLines">
+          <DataField>Examination_CenterDispatchLines</DataField>
+        </Field>
+        <Field Name="PaperCode_CenterDispatchLines">
+          <DataField>PaperCode_CenterDispatchLines</DataField>
+        </Field>
+        <Field Name="NoofScriptsExpected_CenterDispatchLines">
+          <DataField>NoofScriptsExpected_CenterDispatchLines</DataField>
+        </Field>
+        <Field Name="ExaminationSitting_CenterDispatchLines">
+          <DataField>ExaminationSitting_CenterDispatchLines</DataField>
+        </Field>
+        <Field Name="CreatedBy_CenterDispatchLines">
+          <DataField>CreatedBy_CenterDispatchLines</DataField>
+        </Field>
+        <Field Name="LastModifiedDate_CenterDispatchLines">
+          <DataField>LastModifiedDate_CenterDispatchLines</DataField>
+        </Field>
+        <Field Name="Submitted_CenterDispatchLines">
+          <DataField>Submitted_CenterDispatchLines</DataField>
+        </Field>
+        <Field Name="PaperName_CenterDispatchLines">
+          <DataField>PaperName_CenterDispatchLines</DataField>
+        </Field>
+        <Field Name="EnvelopeSerialNo_CenterDispatchLines">
+          <DataField>EnvelopeSerialNo_CenterDispatchLines</DataField>
+        </Field>
+        <Field Name="Posted_CenterDispatchLines">
+          <DataField>Posted_CenterDispatchLines</DataField>
+        </Field>
+        <Field Name="Level_CenterDispatchLines">
+          <DataField>Level_CenterDispatchLines</DataField>
+        </Field>
+        <Field Name="NoMarked_CenterDispatchLines">
+          <DataField>NoMarked_CenterDispatchLines</DataField>
+        </Field>
+        <Field Name="NoSampled_CenterDispatchLines">
+          <DataField>NoSampled_CenterDispatchLines</DataField>
+        </Field>
+        <Field Name="NoPassing_CenterDispatchLines">
+          <DataField>NoPassing_CenterDispatchLines</DataField>
+        </Field>
+        <Field Name="Pass_CenterDispatchLines">
+          <DataField>Pass_CenterDispatchLines</DataField>
+        </Field>
+        <Field Name="Pass_CenterDispatchLinesFormat">
+          <DataField>Pass_CenterDispatchLinesFormat</DataField>
+        </Field>
+        <Field Name="ScriptsType_CenterDispatchLines">
+          <DataField>ScriptsType_CenterDispatchLines</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

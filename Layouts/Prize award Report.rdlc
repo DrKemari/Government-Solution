@@ -1,0 +1,230 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="ReportForNavId_35">
+          <DataField>ReportForNavId_35</DataField>
+        </Field>
+        <Field Name="eXAM">
+          <DataField>eXAM</DataField>
+        </Field>
+        <Field Name="Logo">
+          <DataField>Logo</DataField>
+        </Field>
+        <Field Name="name">
+          <DataField>name</DataField>
+        </Field>
+        <Field Name="city">
+          <DataField>city</DataField>
+        </Field>
+        <Field Name="Add2">
+          <DataField>Add2</DataField>
+        </Field>
+        <Field Name="DocumentNo_HD">
+          <DataField>DocumentNo_HD</DataField>
+        </Field>
+        <Field Name="ExaminationSittingID_HD">
+          <DataField>ExaminationSittingID_HD</DataField>
+        </Field>
+        <Field Name="DocumentDate_HD">
+          <DataField>DocumentDate_HD</DataField>
+        </Field>
+        <Field Name="FinancialYearCode_HD">
+          <DataField>FinancialYearCode_HD</DataField>
+        </Field>
+        <Field Name="Description_HD">
+          <DataField>Description_HD</DataField>
+        </Field>
+        <Field Name="CorporateStrategicPlanID_HD">
+          <DataField>CorporateStrategicPlanID_HD</DataField>
+        </Field>
+        <Field Name="FinancialBudgetID_HD">
+          <DataField>FinancialBudgetID_HD</DataField>
+        </Field>
+        <Field Name="ExaminationStartDate_HD">
+          <DataField>ExaminationStartDate_HD</DataField>
+        </Field>
+        <Field Name="ExaminationEndDate_HD">
+          <DataField>ExaminationEndDate_HD</DataField>
+        </Field>
+        <Field Name="TotalCandidature_HD">
+          <DataField>TotalCandidature_HD</DataField>
+        </Field>
+        <Field Name="ReportForNavId_11">
+          <DataField>ReportForNavId_11</DataField>
+        </Field>
+        <Field Name="DocumentNo_PZ">
+          <DataField>DocumentNo_PZ</DataField>
+        </Field>
+        <Field Name="LineNo_PZ">
+          <DataField>LineNo_PZ</DataField>
+        </Field>
+        <Field Name="StudentRegNo_PZ">
+          <DataField>StudentRegNo_PZ</DataField>
+        </Field>
+        <Field Name="StudentName_PZ">
+          <DataField>StudentName_PZ</DataField>
+        </Field>
+        <Field Name="Examination_PZ">
+          <DataField>Examination_PZ</DataField>
+        </Field>
+        <Field Name="Part_PZ">
+          <DataField>Part_PZ</DataField>
+        </Field>
+        <Field Name="Section_PZ">
+          <DataField>Section_PZ</DataField>
+        </Field>
+        <Field Name="Paper_PZ">
+          <DataField>Paper_PZ</DataField>
+        </Field>
+        <Field Name="Mark_PZ">
+          <DataField>Mark_PZ</DataField>
+        </Field>
+        <Field Name="Mark_PZFormat">
+          <DataField>Mark_PZFormat</DataField>
+        </Field>
+        <Field Name="Grade_PZ">
+          <DataField>Grade_PZ</DataField>
+        </Field>
+        <Field Name="Passed_PZ">
+          <DataField>Passed_PZ</DataField>
+        </Field>
+        <Field Name="ExaminationCenter_PZ">
+          <DataField>ExaminationCenter_PZ</DataField>
+        </Field>
+        <Field Name="PaperName_PZ">
+          <DataField>PaperName_PZ</DataField>
+        </Field>
+        <Field Name="ExaminationSittingID_PZ">
+          <DataField>ExaminationSittingID_PZ</DataField>
+        </Field>
+        <Field Name="EnvelopeSerialNo_PZ">
+          <DataField>EnvelopeSerialNo_PZ</DataField>
+        </Field>
+        <Field Name="Submitted_PZ">
+          <DataField>Submitted_PZ</DataField>
+        </Field>
+        <Field Name="MarkerNo_PZ">
+          <DataField>MarkerNo_PZ</DataField>
+        </Field>
+        <Field Name="MarkerName_PZ">
+          <DataField>MarkerName_PZ</DataField>
+        </Field>
+        <Field Name="Question1_PZ">
+          <DataField>Question1_PZ</DataField>
+        </Field>
+        <Field Name="Question2_PZ">
+          <DataField>Question2_PZ</DataField>
+        </Field>
+        <Field Name="Question3_PZ">
+          <DataField>Question3_PZ</DataField>
+        </Field>
+        <Field Name="Question4_PZ">
+          <DataField>Question4_PZ</DataField>
+        </Field>
+        <Field Name="Question5_PZ">
+          <DataField>Question5_PZ</DataField>
+        </Field>
+        <Field Name="Question6_PZ">
+          <DataField>Question6_PZ</DataField>
+        </Field>
+        <Field Name="Question7_PZ">
+          <DataField>Question7_PZ</DataField>
+        </Field>
+        <Field Name="Question8_PZ">
+          <DataField>Question8_PZ</DataField>
+        </Field>
+        <Field Name="Question9_PZ">
+          <DataField>Question9_PZ</DataField>
+        </Field>
+        <Field Name="Question10_PZ">
+          <DataField>Question10_PZ</DataField>
+        </Field>
+        <Field Name="TotalMarks_PZ">
+          <DataField>TotalMarks_PZ</DataField>
+        </Field>
+        <Field Name="ActualMarks_PZ">
+          <DataField>ActualMarks_PZ</DataField>
+        </Field>
+        <Field Name="Variance_PZ">
+          <DataField>Variance_PZ</DataField>
+        </Field>
+        <Field Name="CheckerNo_PZ">
+          <DataField>CheckerNo_PZ</DataField>
+        </Field>
+        <Field Name="CheckerName_PZ">
+          <DataField>CheckerName_PZ</DataField>
+        </Field>
+        <Field Name="CheckerSubmitted_PZ">
+          <DataField>CheckerSubmitted_PZ</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

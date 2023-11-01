@@ -1,0 +1,188 @@
+#pragma warning disable AA0005, AA0008, AA0018, AA0021, AA0072, AA0137, AA0201, AA0206, AA0218, AA0228, AL0254, AL0424, AS0011, AW0006 // ForNAV settings
+#pragma implicitwith disable
+Page 69275 "Hr Asset Transfer Card"
+{
+    DeleteAllowed = false;
+    PageType = Card;
+    SourceTable = "HR Asset Transfer Header";
+    SourceTableView = where(Status = filter(<> Approved));
+
+    layout
+    {
+        area(content)
+        {
+            group(General)
+            {
+                field("No."; Rec."No.")
+                {
+                    ApplicationArea = Basic;
+                    Editable = Edit;
+                    ToolTip = 'Specifies the value of the No. field.';
+                }
+                field("Document Date"; Rec."Document Date")
+                {
+                    ApplicationArea = Basic;
+                    Editable = Edit;
+                    ToolTip = 'Specifies the value of the Document Date field.';
+                }
+                field("Responsibility Center"; Rec."Responsibility Center")
+                {
+                    ApplicationArea = Basic;
+                    ToolTip = 'Specifies the value of the Responsibility Center field.';
+                }
+                field(Status; Rec.Status)
+                {
+                    ApplicationArea = Basic;
+                    Editable = false;
+                    ToolTip = 'Specifies the value of the Status field.';
+                }
+            }
+            part(Control9; "Hr Asset Transfer Lines")
+            {
+                Editable = Line;
+                SubPageLink = "No." = field("No.");
+                ApplicationArea = Basic;
+            }
+        }
+        area(factboxes)
+        {
+            systempart(Control16; Links)
+            {
+                Visible = true;
+                ApplicationArea = Basic;
+            }
+        }
+    }
+
+    actions
+    {
+        area(processing)
+        {
+            group("Request Approval")
+            {
+                Caption = 'Request Approval';
+                action(SendApprovalRequest)
+            {
+                ApplicationArea = Basic;
+                Caption = 'Send A&pproval Request';
+                Image = SendApprovalRequest;
+                Promoted = true;
+                PromotedCategory = Category9;
+                ToolTip = 'Executes the Send A&pproval Request action.';
+                trigger OnAction()
+                var
+                    VarVariant: Variant;
+                    CustomApprovals: Codeunit "Custom Approvals Codeunit";
+
+                    ApprovalsMgmt: Codeunit "Custom Approvals Codeunit";
+                begin
+                  
+                    VarVariant := Rec;
+                    IF ApprovalsMgmt.CheckApprovalsWorkflowEnabled(VarVariant) THEN
+                        ApprovalsMgmt.OnSendDocForApproval(VarVariant);
+                 
+                end;
+            }
+
+            action(CancelApprovalRequest)
+            {
+                ApplicationArea = Basic;
+                Caption = 'Cancel Approval Re&quest';
+                Image = Cancel;
+                Promoted = true;
+                PromotedCategory = Category9;
+                ToolTip = 'Executes the Cancel Approval Re&quest action.';
+                trigger OnAction()
+                var
+                    VarVariant: Variant;
+                    CustomApprovals: Codeunit "Custom Approvals Codeunit";
+                    ApprovalsMgmt: Codeunit "Custom Approvals Codeunit";
+                begin
+                    Rec.TestField(Status, Rec.Status::"Pending Approval");//status must be open.
+                    VarVariant := Rec;
+                    CustomApprovals.OnCancelDocApprovalRequest(VarVariant);
+
+                end;
+            }
+                 action(Approvals)
+            {
+                ApplicationArea = Basic;
+                Caption = 'Approvals';
+                Image = Approvals;
+                Promoted = true;
+                PromotedCategory = New;
+                PromotedIsBig = false;
+
+                trigger OnAction()
+                var
+                    ApprovalsMgt: Codeunit "Approvals Mgmt.";
+                begin
+
+                    ApprovalsMgt.OpenApprovalEntriesPage(Rec.RecordId);
+                end;
+            }
+            }
+            action("Print Review")
+            {
+                ApplicationArea = Basic;
+                Caption = 'Print Review';
+                ToolTip = 'Executes the Print Review action.';
+                trigger OnAction()
+                begin
+
+                    RecHeader.Reset;
+                    RecHeader.SetFilter(RecHeader."No.", xRec."No.");
+                    Report.Run(54371, true, true, RecHeader);
+                end;
+            }
+        }
+    }
+
+    trigger OnAfterGetCurrRecord()
+    begin
+        Updatecontrol;
+    end;
+
+    trigger OnAfterGetRecord()
+    begin
+        Updatecontrol;
+    end;
+
+    trigger OnInit()
+    begin
+        Edit := true;
+        Line := true;
+    end;
+
+    var
+        RecHeader: Record "HR Asset Transfer Header";
+        ApprovalEntries: Page "Approval Entries";
+        DocumentType: Option Quote,"Order",Invoice,"Credit Memo","Blanket Order","Return Order","None","Payment Voucher","Petty Cash",Imprest,Requisition,ImprestSurrender,Interbank,Receipt,"Staff Claim","Staff Advance",AdvanceSurrender,"Bank Slip",Grant,"Grant Surrender","Employee Requisition","Leave Application","Training Requisition","Transport Requisition",JV,"Grant Task","Concept Note",Proposal,"Job Approval","Disciplinary Approvals",GRN,Clearence,Donation,Transfer,PayChange,Budget,GL,"Cash Purchase","Leave Reimburse",Appraisal,Inspection,Closeout,"Lab Request",ProposalProjectsAreas,"Leave Carry over",EmpTransfer,LeavePlanner,HrAssetTransfer;
+        Edit: Boolean;
+        Line: Boolean;
+        //ApprovalsMgmt: Codeunit "Approvals Mgmt.";
+        OpenApprovalEntriesExistForCurrUser: Boolean;
+        OpenApprovalEntriesExist: Boolean;
+        ShowWorkflowStatus: Boolean;
+
+
+    procedure Updatecontrol()
+    begin
+        /*
+        IF Status=Status::Open THEN BEGIN
+        Edit:=TRUE;
+        Line:=TRUE;
+        END ELSE IF Status=Status::"Pending Approval" THEN BEGIN
+        Edit:=FALSE;
+        Line:=FALSE;
+        END ELSE IF Status=Status::Approved THEN BEGIN
+        Edit:=FALSE;
+        Line:=FALSE;
+        END
+         */
+
+    end;
+}
+
+#pragma implicitwith restore
+

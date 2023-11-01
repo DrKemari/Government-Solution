@@ -1,0 +1,437 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="ReportForNavId_1">
+          <DataField>ReportForNavId_1</DataField>
+        </Field>
+        <Field Name="No_Resource">
+          <DataField>No_Resource</DataField>
+        </Field>
+        <Field Name="Type_Resource">
+          <DataField>Type_Resource</DataField>
+        </Field>
+        <Field Name="Name_Resource">
+          <DataField>Name_Resource</DataField>
+        </Field>
+        <Field Name="SearchName_Resource">
+          <DataField>SearchName_Resource</DataField>
+        </Field>
+        <Field Name="Name2_Resource">
+          <DataField>Name2_Resource</DataField>
+        </Field>
+        <Field Name="Address_Resource">
+          <DataField>Address_Resource</DataField>
+        </Field>
+        <Field Name="Address2_Resource">
+          <DataField>Address2_Resource</DataField>
+        </Field>
+        <Field Name="City_Resource">
+          <DataField>City_Resource</DataField>
+        </Field>
+        <Field Name="SocialSecurityNo_Resource">
+          <DataField>SocialSecurityNo_Resource</DataField>
+        </Field>
+        <Field Name="JobTitle_Resource">
+          <DataField>JobTitle_Resource</DataField>
+        </Field>
+        <Field Name="Education_Resource">
+          <DataField>Education_Resource</DataField>
+        </Field>
+        <Field Name="ContractClass_Resource">
+          <DataField>ContractClass_Resource</DataField>
+        </Field>
+        <Field Name="EmploymentDate_Resource">
+          <DataField>EmploymentDate_Resource</DataField>
+        </Field>
+        <Field Name="ResourceGroupNo_Resource">
+          <DataField>ResourceGroupNo_Resource</DataField>
+        </Field>
+        <Field Name="GlobalDimension1Code_Resource">
+          <DataField>GlobalDimension1Code_Resource</DataField>
+        </Field>
+        <Field Name="GlobalDimension2Code_Resource">
+          <DataField>GlobalDimension2Code_Resource</DataField>
+        </Field>
+        <Field Name="BaseUnitofMeasure_Resource">
+          <DataField>BaseUnitofMeasure_Resource</DataField>
+        </Field>
+        <Field Name="DirectUnitCost_Resource">
+          <DataField>DirectUnitCost_Resource</DataField>
+        </Field>
+        <Field Name="DirectUnitCost_ResourceFormat">
+          <DataField>DirectUnitCost_ResourceFormat</DataField>
+        </Field>
+        <Field Name="IndirectCost_Resource">
+          <DataField>IndirectCost_Resource</DataField>
+        </Field>
+        <Field Name="IndirectCost_ResourceFormat">
+          <DataField>IndirectCost_ResourceFormat</DataField>
+        </Field>
+        <Field Name="UnitCost_Resource">
+          <DataField>UnitCost_Resource</DataField>
+        </Field>
+        <Field Name="UnitCost_ResourceFormat">
+          <DataField>UnitCost_ResourceFormat</DataField>
+        </Field>
+        <Field Name="Profit_Resource">
+          <DataField>Profit_Resource</DataField>
+        </Field>
+        <Field Name="Profit_ResourceFormat">
+          <DataField>Profit_ResourceFormat</DataField>
+        </Field>
+        <Field Name="PriceProfitCalculation_Resource">
+          <DataField>PriceProfitCalculation_Resource</DataField>
+        </Field>
+        <Field Name="UnitPrice_Resource">
+          <DataField>UnitPrice_Resource</DataField>
+        </Field>
+        <Field Name="UnitPrice_ResourceFormat">
+          <DataField>UnitPrice_ResourceFormat</DataField>
+        </Field>
+        <Field Name="VendorNo_Resource">
+          <DataField>VendorNo_Resource</DataField>
+        </Field>
+        <Field Name="LastDateModified_Resource">
+          <DataField>LastDateModified_Resource</DataField>
+        </Field>
+        <Field Name="Comment_Resource">
+          <DataField>Comment_Resource</DataField>
+        </Field>
+        <Field Name="Blocked_Resource">
+          <DataField>Blocked_Resource</DataField>
+        </Field>
+        <Field Name="DateFilter_Resource">
+          <DataField>DateFilter_Resource</DataField>
+        </Field>
+        <Field Name="UnitofMeasureFilter_Resource">
+          <DataField>UnitofMeasureFilter_Resource</DataField>
+        </Field>
+        <Field Name="Capacity_Resource">
+          <DataField>Capacity_Resource</DataField>
+        </Field>
+        <Field Name="Capacity_ResourceFormat">
+          <DataField>Capacity_ResourceFormat</DataField>
+        </Field>
+        <Field Name="QtyonOrderJob_Resource">
+          <DataField>QtyonOrderJob_Resource</DataField>
+        </Field>
+        <Field Name="QtyonOrderJob_ResourceFormat">
+          <DataField>QtyonOrderJob_ResourceFormat</DataField>
+        </Field>
+        <Field Name="QtyQuotedJob_Resource">
+          <DataField>QtyQuotedJob_Resource</DataField>
+        </Field>
+        <Field Name="QtyQuotedJob_ResourceFormat">
+          <DataField>QtyQuotedJob_ResourceFormat</DataField>
+        </Field>
+        <Field Name="UsageQty_Resource">
+          <DataField>UsageQty_Resource</DataField>
+        </Field>
+        <Field Name="UsageQty_ResourceFormat">
+          <DataField>UsageQty_ResourceFormat</DataField>
+        </Field>
+        <Field Name="UsageCost_Resource">
+          <DataField>UsageCost_Resource</DataField>
+        </Field>
+        <Field Name="UsageCost_ResourceFormat">
+          <DataField>UsageCost_ResourceFormat</DataField>
+        </Field>
+        <Field Name="UsagePrice_Resource">
+          <DataField>UsagePrice_Resource</DataField>
+        </Field>
+        <Field Name="UsagePrice_ResourceFormat">
+          <DataField>UsagePrice_ResourceFormat</DataField>
+        </Field>
+        <Field Name="SalesQty_Resource">
+          <DataField>SalesQty_Resource</DataField>
+        </Field>
+        <Field Name="SalesQty_ResourceFormat">
+          <DataField>SalesQty_ResourceFormat</DataField>
+        </Field>
+        <Field Name="SalesCost_Resource">
+          <DataField>SalesCost_Resource</DataField>
+        </Field>
+        <Field Name="SalesCost_ResourceFormat">
+          <DataField>SalesCost_ResourceFormat</DataField>
+        </Field>
+        <Field Name="SalesPrice_Resource">
+          <DataField>SalesPrice_Resource</DataField>
+        </Field>
+        <Field Name="SalesPrice_ResourceFormat">
+          <DataField>SalesPrice_ResourceFormat</DataField>
+        </Field>
+        <Field Name="ChargeableFilter_Resource">
+          <DataField>ChargeableFilter_Resource</DataField>
+        </Field>
+        <Field Name="GenProdPostingGroup_Resource">
+          <DataField>GenProdPostingGroup_Resource</DataField>
+        </Field>
+        <Field Name="PostCode_Resource">
+          <DataField>PostCode_Resource</DataField>
+        </Field>
+        <Field Name="County_Resource">
+          <DataField>County_Resource</DataField>
+        </Field>
+        <Field Name="AutomaticExtTexts_Resource">
+          <DataField>AutomaticExtTexts_Resource</DataField>
+        </Field>
+        <Field Name="NoSeries_Resource">
+          <DataField>NoSeries_Resource</DataField>
+        </Field>
+        <Field Name="TaxGroupCode_Resource">
+          <DataField>TaxGroupCode_Resource</DataField>
+        </Field>
+        <Field Name="VATProdPostingGroup_Resource">
+          <DataField>VATProdPostingGroup_Resource</DataField>
+        </Field>
+        <Field Name="CountryRegionCode_Resource">
+          <DataField>CountryRegionCode_Resource</DataField>
+        </Field>
+        <Field Name="ICPartnerPurchGLAccNo_Resource">
+          <DataField>ICPartnerPurchGLAccNo_Resource</DataField>
+        </Field>
+        <Field Name="ServiceNo_Resource">
+          <DataField>ServiceNo_Resource</DataField>
+        </Field>
+        <Field Name="Email_Resource">
+          <DataField>Email_Resource</DataField>
+        </Field>
+        <Field Name="IDPassportNo_Resource">
+          <DataField>IDPassportNo_Resource</DataField>
+        </Field>
+        <Field Name="Image_Resource">
+          <DataField>Image_Resource</DataField>
+        </Field>
+        <Field Name="PrivacyBlocked_Resource">
+          <DataField>PrivacyBlocked_Resource</DataField>
+        </Field>
+        <Field Name="QtyonAssemblyOrder_Resource">
+          <DataField>QtyonAssemblyOrder_Resource</DataField>
+        </Field>
+        <Field Name="QtyonAssemblyOrder_ResourceFormat">
+          <DataField>QtyonAssemblyOrder_ResourceFormat</DataField>
+        </Field>
+        <Field Name="UseTimeSheet_Resource">
+          <DataField>UseTimeSheet_Resource</DataField>
+        </Field>
+        <Field Name="TimeSheetOwnerUserID_Resource">
+          <DataField>TimeSheetOwnerUserID_Resource</DataField>
+        </Field>
+        <Field Name="TimeSheetApproverUserID_Resource">
+          <DataField>TimeSheetApproverUserID_Resource</DataField>
+        </Field>
+        <Field Name="DefaultDeferralTemplateCode_Resource">
+          <DataField>DefaultDeferralTemplateCode_Resource</DataField>
+        </Field>
+        <Field Name="QtyonServiceOrder_Resource">
+          <DataField>QtyonServiceOrder_Resource</DataField>
+        </Field>
+        <Field Name="QtyonServiceOrder_ResourceFormat">
+          <DataField>QtyonServiceOrder_ResourceFormat</DataField>
+        </Field>
+        <Field Name="ServiceZoneFilter_Resource">
+          <DataField>ServiceZoneFilter_Resource</DataField>
+        </Field>
+        <Field Name="InCustomerZone_Resource">
+          <DataField>InCustomerZone_Resource</DataField>
+        </Field>
+        <Field Name="ShortcutDimension3Code_Resource">
+          <DataField>ShortcutDimension3Code_Resource</DataField>
+        </Field>
+        <Field Name="ShortcutDimension4Code_Resource">
+          <DataField>ShortcutDimension4Code_Resource</DataField>
+        </Field>
+        <Field Name="ShortcutDimension5Code_Resource">
+          <DataField>ShortcutDimension5Code_Resource</DataField>
+        </Field>
+        <Field Name="Researcher_Resource">
+          <DataField>Researcher_Resource</DataField>
+        </Field>
+        <Field Name="BankName_Resource">
+          <DataField>BankName_Resource</DataField>
+        </Field>
+        <Field Name="BranchName_Resource">
+          <DataField>BranchName_Resource</DataField>
+        </Field>
+        <Field Name="BankBranchNo_Resource">
+          <DataField>BankBranchNo_Resource</DataField>
+        </Field>
+        <Field Name="BankAccountNo_Resource">
+          <DataField>BankAccountNo_Resource</DataField>
+        </Field>
+        <Field Name="BankCode_Resource">
+          <DataField>BankCode_Resource</DataField>
+        </Field>
+        <Field Name="MPesaNumber_Resource">
+          <DataField>MPesaNumber_Resource</DataField>
+        </Field>
+        <Field Name="NoofAwardedGFO_Resource">
+          <DataField>NoofAwardedGFO_Resource</DataField>
+        </Field>
+        <Field Name="NoofLostGrantGFO_Resource">
+          <DataField>NoofLostGrantGFO_Resource</DataField>
+        </Field>
+        <Field Name="NoofOngoingRProjects_Resource">
+          <DataField>NoofOngoingRProjects_Resource</DataField>
+        </Field>
+        <Field Name="NoofCompletedRProjects_Resource">
+          <DataField>NoofCompletedRProjects_Resource</DataField>
+        </Field>
+        <Field Name="NoofResearchOutputs_Resource">
+          <DataField>NoofResearchOutputs_Resource</DataField>
+        </Field>
+        <Field Name="TotalAmountAwardedLCY_Resource">
+          <DataField>TotalAmountAwardedLCY_Resource</DataField>
+        </Field>
+        <Field Name="TotalAmountAwardedLCY_ResourceFormat">
+          <DataField>TotalAmountAwardedLCY_ResourceFormat</DataField>
+        </Field>
+        <Field Name="Admin_Resource">
+          <DataField>Admin_Resource</DataField>
+        </Field>
+        <Field Name="EmployeeNo_Resource">
+          <DataField>EmployeeNo_Resource</DataField>
+        </Field>
+        <Field Name="EmployeeName_Resource">
+          <DataField>EmployeeName_Resource</DataField>
+        </Field>
+        <Field Name="ResourceType_Resource">
+          <DataField>ResourceType_Resource</DataField>
+        </Field>
+        <Field Name="ExternalConsultant_Resource">
+          <DataField>ExternalConsultant_Resource</DataField>
+        </Field>
+        <Field Name="ResearchersMajor_Resource">
+          <DataField>ResearchersMajor_Resource</DataField>
+        </Field>
+        <Field Name="ResearcherBiography_Resource">
+          <DataField>ResearcherBiography_Resource</DataField>
+        </Field>
+        <Field Name="JobGroup_Resource">
+          <DataField>JobGroup_Resource</DataField>
+        </Field>
+        <Field Name="Employeestatus_Resource">
+          <DataField>Employeestatus_Resource</DataField>
+        </Field>
+        <Field Name="EmailAddress_Resource">
+          <DataField>EmailAddress_Resource</DataField>
+        </Field>
+        <Field Name="ProjectEngineer_Resource">
+          <DataField>ProjectEngineer_Resource</DataField>
+        </Field>
+        <Field Name="NoOfOngoingRoadProjects_Resource">
+          <DataField>NoOfOngoingRoadProjects_Resource</DataField>
+        </Field>
+        <Field Name="NoOfFinishedRoadProjects_Resource">
+          <DataField>NoOfFinishedRoadProjects_Resource</DataField>
+        </Field>
+        <Field Name="NoOfPlannedRoadProjects_Resource">
+          <DataField>NoOfPlannedRoadProjects_Resource</DataField>
+        </Field>
+        <Field Name="Interns_Resource">
+          <DataField>Interns_Resource</DataField>
+        </Field>
+        <Field Name="TransactionType_Resource">
+          <DataField>TransactionType_Resource</DataField>
+        </Field>
+        <Field Name="ExamBookingCategory_Resource">
+          <DataField>ExamBookingCategory_Resource</DataField>
+        </Field>
+        <Field Name="SectionID_Resource">
+          <DataField>SectionID_Resource</DataField>
+        </Field>
+        <Field Name="CourseID_Resource">
+          <DataField>CourseID_Resource</DataField>
+        </Field>
+        <Field Name="PaperID_Resource">
+          <DataField>PaperID_Resource</DataField>
+        </Field>
+        <Field Name="PartID_Resource">
+          <DataField>PartID_Resource</DataField>
+        </Field>
+        <Field Name="ExamResorceType_Resource">
+          <DataField>ExamResorceType_Resource</DataField>
+        </Field>
+        <Field Name="EMail_Resources">
+          <DataField>EMail_Resources</DataField>
+        </Field>
+        <Field Name="ExamTaskType_Resource">
+          <DataField>ExamTaskType_Resource</DataField>
+        </Field>
+        <Field Name="ExaminerCode_Resource">
+          <DataField>ExaminerCode_Resource</DataField>
+        </Field>
+        <Field Name="Signature_Resource">
+          <DataField>Signature_Resource</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

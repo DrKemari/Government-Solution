@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="ReportForNavId_35">
+          <DataField>ReportForNavId_35</DataField>
+        </Field>
+        <Field Name="Logo">
+          <DataField>Logo</DataField>
+        </Field>
+        <Field Name="name">
+          <DataField>name</DataField>
+        </Field>
+        <Field Name="city">
+          <DataField>city</DataField>
+        </Field>
+        <Field Name="Add2">
+          <DataField>Add2</DataField>
+        </Field>
+        <Field Name="DocumentNo_HD">
+          <DataField>DocumentNo_HD</DataField>
+        </Field>
+        <Field Name="EngagementCategory_HD">
+          <DataField>EngagementCategory_HD</DataField>
+        </Field>
+        <Field Name="No_HD">
+          <DataField>No_HD</DataField>
+        </Field>
+        <Field Name="Email_HD">
+          <DataField>Email_HD</DataField>
+        </Field>
+        <Field Name="PlannedStartDate_HD">
+          <DataField>PlannedStartDate_HD</DataField>
+        </Field>
+        <Field Name="PlannedEndDate_HD">
+          <DataField>PlannedEndDate_HD</DataField>
+        </Field>
+        <Field Name="GlobalDimensionDim1Code_HD">
+          <DataField>GlobalDimensionDim1Code_HD</DataField>
+        </Field>
+        <Field Name="GlobalDimensionDim2Code_HD">
+          <DataField>GlobalDimensionDim2Code_HD</DataField>
+        </Field>
+        <Field Name="DimensionSetID_HD">
+          <DataField>DimensionSetID_HD</DataField>
+        </Field>
+        <Field Name="ExamSitting_HD">
+          <DataField>ExamSitting_HD</DataField>
+        </Field>
+        <Field Name="DocumentDate_HD">
+          <DataField>DocumentDate_HD</DataField>
+        </Field>
+        <Field Name="CreatedBy_HD">
+          <DataField>CreatedBy_HD</DataField>
+        </Field>
+        <Field Name="CreatedOn_HD">
+          <DataField>CreatedOn_HD</DataField>
+        </Field>
+        <Field Name="Status_HD">
+          <DataField>Status_HD</DataField>
+        </Field>
+        <Field Name="Name_HD">
+          <DataField>Name_HD</DataField>
+        </Field>
+        <Field Name="NoSeries_HD">
+          <DataField>NoSeries_HD</DataField>
+        </Field>
+        <Field Name="DocumentType_HD">
+          <DataField>DocumentType_HD</DataField>
+        </Field>
+        <Field Name="Posted_HD">
+          <DataField>Posted_HD</DataField>
+        </Field>
+        <Field Name="PostedOn_HD">
+          <DataField>PostedOn_HD</DataField>
+        </Field>
+        <Field Name="PostedBy_HD">
+          <DataField>PostedBy_HD</DataField>
+        </Field>
+        <Field Name="OverallScore_HD">
+          <DataField>OverallScore_HD</DataField>
+        </Field>
+        <Field Name="OverallComment_HD">
+          <DataField>OverallComment_HD</DataField>
+        </Field>
+        <Field Name="ReportForNavId_12">
+          <DataField>ReportForNavId_12</DataField>
+        </Field>
+        <Field Name="DocumentNo_CS">
+          <DataField>DocumentNo_CS</DataField>
+        </Field>
+        <Field Name="LineNo_CS">
+          <DataField>LineNo_CS</DataField>
+        </Field>
+        <Field Name="Criteria_CS">
+          <DataField>Criteria_CS</DataField>
+        </Field>
+        <Field Name="Rating_CS">
+          <DataField>Rating_CS</DataField>
+        </Field>
+        <Field Name="Score_CS">
+          <DataField>Score_CS</DataField>
+        </Field>
+        <Field Name="Recommendation_CS">
+          <DataField>Recommendation_CS</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

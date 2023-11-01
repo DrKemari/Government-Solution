@@ -1,0 +1,194 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="ReportForNavId_1">
+          <DataField>ReportForNavId_1</DataField>
+        </Field>
+        <Field Name="DocumentNo_MarksheetHeader">
+          <DataField>DocumentNo_MarksheetHeader</DataField>
+        </Field>
+        <Field Name="ExaminationSittingID_MarksheetHeader">
+          <DataField>ExaminationSittingID_MarksheetHeader</DataField>
+        </Field>
+        <Field Name="DocumentDate_MarksheetHeader">
+          <DataField>DocumentDate_MarksheetHeader</DataField>
+        </Field>
+        <Field Name="FinancialYearCode_MarksheetHeader">
+          <DataField>FinancialYearCode_MarksheetHeader</DataField>
+        </Field>
+        <Field Name="Description_MarksheetHeader">
+          <DataField>Description_MarksheetHeader</DataField>
+        </Field>
+        <Field Name="CorporateStrategicPlanID_MarksheetHeader">
+          <DataField>CorporateStrategicPlanID_MarksheetHeader</DataField>
+        </Field>
+        <Field Name="ReportForNavId_8">
+          <DataField>ReportForNavId_8</DataField>
+        </Field>
+        <Field Name="DocumentNo_MarksheetDetailedLines">
+          <DataField>DocumentNo_MarksheetDetailedLines</DataField>
+        </Field>
+        <Field Name="LineNo_MarksheetDetailedLines">
+          <DataField>LineNo_MarksheetDetailedLines</DataField>
+        </Field>
+        <Field Name="StudentRegNo_MarksheetDetailedLines">
+          <DataField>StudentRegNo_MarksheetDetailedLines</DataField>
+        </Field>
+        <Field Name="StudentName_MarksheetDetailedLines">
+          <DataField>StudentName_MarksheetDetailedLines</DataField>
+        </Field>
+        <Field Name="Examination_MarksheetDetailedLines">
+          <DataField>Examination_MarksheetDetailedLines</DataField>
+        </Field>
+        <Field Name="Part_MarksheetDetailedLines">
+          <DataField>Part_MarksheetDetailedLines</DataField>
+        </Field>
+        <Field Name="Section_MarksheetDetailedLines">
+          <DataField>Section_MarksheetDetailedLines</DataField>
+        </Field>
+        <Field Name="Paper_MarksheetDetailedLines">
+          <DataField>Paper_MarksheetDetailedLines</DataField>
+        </Field>
+        <Field Name="Mark_MarksheetDetailedLines">
+          <DataField>Mark_MarksheetDetailedLines</DataField>
+        </Field>
+        <Field Name="Mark_MarksheetDetailedLinesFormat">
+          <DataField>Mark_MarksheetDetailedLinesFormat</DataField>
+        </Field>
+        <Field Name="Grade_MarksheetDetailedLines">
+          <DataField>Grade_MarksheetDetailedLines</DataField>
+        </Field>
+        <Field Name="Passed_MarksheetDetailedLines">
+          <DataField>Passed_MarksheetDetailedLines</DataField>
+        </Field>
+        <Field Name="ExaminationCenter_MarksheetDetailedLines">
+          <DataField>ExaminationCenter_MarksheetDetailedLines</DataField>
+        </Field>
+        <Field Name="PaperName_MarksheetDetailedLines">
+          <DataField>PaperName_MarksheetDetailedLines</DataField>
+        </Field>
+        <Field Name="ExaminationSittingID_MarksheetDetailedLines">
+          <DataField>ExaminationSittingID_MarksheetDetailedLines</DataField>
+        </Field>
+        <Field Name="EnvelopeSerialNo_MarksheetDetailedLines">
+          <DataField>EnvelopeSerialNo_MarksheetDetailedLines</DataField>
+        </Field>
+        <Field Name="Submitted_MarksheetDetailedLines">
+          <DataField>Submitted_MarksheetDetailedLines</DataField>
+        </Field>
+        <Field Name="MarkerNo_MarksheetDetailedLines">
+          <DataField>MarkerNo_MarksheetDetailedLines</DataField>
+        </Field>
+        <Field Name="MarkerName_MarksheetDetailedLines">
+          <DataField>MarkerName_MarksheetDetailedLines</DataField>
+        </Field>
+        <Field Name="Question1_MarksheetDetailedLines">
+          <DataField>Question1_MarksheetDetailedLines</DataField>
+        </Field>
+        <Field Name="Question2_MarksheetDetailedLines">
+          <DataField>Question2_MarksheetDetailedLines</DataField>
+        </Field>
+        <Field Name="Question3_MarksheetDetailedLines">
+          <DataField>Question3_MarksheetDetailedLines</DataField>
+        </Field>
+        <Field Name="Question4_MarksheetDetailedLines">
+          <DataField>Question4_MarksheetDetailedLines</DataField>
+        </Field>
+        <Field Name="Question5_MarksheetDetailedLines">
+          <DataField>Question5_MarksheetDetailedLines</DataField>
+        </Field>
+        <Field Name="Question6_MarksheetDetailedLines">
+          <DataField>Question6_MarksheetDetailedLines</DataField>
+        </Field>
+        <Field Name="Question7_MarksheetDetailedLines">
+          <DataField>Question7_MarksheetDetailedLines</DataField>
+        </Field>
+        <Field Name="Question8_MarksheetDetailedLines">
+          <DataField>Question8_MarksheetDetailedLines</DataField>
+        </Field>
+        <Field Name="Question9_MarksheetDetailedLines">
+          <DataField>Question9_MarksheetDetailedLines</DataField>
+        </Field>
+        <Field Name="Question10_MarksheetDetailedLines">
+          <DataField>Question10_MarksheetDetailedLines</DataField>
+        </Field>
+        <Field Name="TotalMarks_MarksheetDetailedLines">
+          <DataField>TotalMarks_MarksheetDetailedLines</DataField>
+        </Field>
+        <Field Name="ActualMarks_MarksheetDetailedLines">
+          <DataField>ActualMarks_MarksheetDetailedLines</DataField>
+        </Field>
+        <Field Name="Variance_MarksheetDetailedLines">
+          <DataField>Variance_MarksheetDetailedLines</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

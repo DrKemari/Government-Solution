@@ -1,0 +1,409 @@
+report 57041 "Payment Schedule"
+{
+    DefaultLayout = RDLC;
+    RDLCLayout = './Payment Schedule.rdlc';
+
+    dataset
+    {
+        dataitem(Payments; Payments)
+        {
+            DataItemTableView = WHERE("Payment Type" = filter("Payment Schedule"));
+            PrintOnlyIfDetail = false;
+            RequestFilterFields = "No.", Date, "Cheque No", "Bank Code", Payee;
+            column(CompanyLogo; CompanyInfo.Picture)
+            {
+            }
+            column(CompanyName; CompanyInfo.Name)
+            {
+            }
+            column(CompanyAddress; CompanyInfo.Address)
+            {
+            }
+            column(CompanyAddress2; CompanyInfo."Address 2")
+            {
+            }
+            column(CompanyPostCode; CompanyInfo."Post Code")
+            {
+            }
+            column(CompanyCity; CompanyInfo.City)
+            {
+            }
+            column(CompanyPhone; CompanyInfo."Phone No.")
+            {
+            }
+            column(CompanyFax; CompanyInfo."Fax No.")
+            {
+            }
+
+            column(CompanyEmail; CompanyInfo."E-Mail")
+            {
+            }
+            column(ResourcesTotalAmount_Payments; "Resources Total Amount")
+            {
+            }
+            column(CompanyWebsite; CompanyInfo."Home Page")
+            {
+            }
+            column(No_Payments; Payments."No.")
+            {
+            }
+            column(Date_Payments; Payments.Date)
+            {
+            }
+            column(PaymentsNarration; Payments."Payment Narration")
+            {
+            }
+            column(Type_Payments; Payments.Type)
+            {
+            }
+            column(JobNo_Payments; Payments.Project)
+            {
+            }
+            column(JobDescription_Payments; Payments."Project Description")
+            {
+            }
+            column(BankName_Payments; Payments."Bank Name")
+            {
+            }
+            column(PayMode_Payments; Payments."Pay Mode")
+            {
+            }
+            column(ChequeNo_Payments; Payments."Cheque No")
+            {
+            }
+            column(ChequeDate_Payments; Payments."Cheque Date")
+            {
+            }
+            column(BankCode_Payments; Payments."Bank Code")
+            {
+            }
+            column(Payee_Payments; Payments.Payee)
+            {
+            }
+            column(Onbehalfof_Payments; Payments."On behalf of")
+            {
+            }
+            column(CreatedBy_Payments; Payments."Created By")
+            {
+            }
+            column(Posted_Payments; Payments.Posted)
+            {
+            }
+            column(PostedBy_Payments; Payments."Posted By")
+            {
+            }
+            column(PostedDate_Payments; Payments."Posted Date")
+            {
+            }
+            column(GlobalDimension1Code_Payments; Payments."Shortcut Dimension 1 Code")
+            {
+            }
+            column(GlobalDimension2Code_Payments; Payments."Shortcut Dimension 2 Code")
+            {
+            }
+            column(TimePosted_Payments; Payments."Time Posted")
+            {
+            }
+            column(TotalAmount_Payments; Payments."Total Amount LCY")
+            {
+            }
+            column(PayingBankAccount_Payments; Payments."Paying Bank Account")
+            {
+            }
+            column(Status_Payments; Payments.Status)
+            {
+            }
+            column(PaymentType_Payments; Payments."Payment Type")
+            {
+            }
+            column(Currency_Payments; Payments."Currency Code")
+            {
+            }
+            column(NoSeries_Payments; Payments."No. Series")
+            {
+            }
+            column(AccountType_Payments; Payments."Account Type")
+            {
+            }
+            column(AccountNo_Payments; Payments."Account No.")
+            {
+            }
+            column(AccountName_Payments; Payments."Account Name")
+            {
+            }
+            column(ImprestAmount_Payments; Payments."Imprest Amount")
+            {
+            }
+            column(Surrendered_Payments; Payments.Surrendered)
+            {
+            }
+            column(AppliesToDocNo_Payments; Payments."Applies- To Doc No.")
+            {
+            }
+            column(PettyCashAmount_Payments; Payments."Petty Cash Amount")
+            {
+            }
+            column(OriginalDocument_Payments; Payments."Original Document")
+            {
+            }
+            column(PVCreationDateTime_Payments; Payments."PV Creation DateTime")
+            {
+            }
+            column(PVCreatorID_Payments; Payments."PV Creator ID")
+            {
+            }
+            column(RemainingAmount_Payments; Payments."Remaining Amount")
+            {
+            }
+            column(ReceiptCreated_Payments; Payments."Receipt Created")
+            {
+            }
+            column(ImprestDeadline_Payments; Payments."Imprest Deadline")
+            {
+            }
+            column(ImprestSurrenderDate_Payments; Payments."Surrender Date")
+            {
+            }
+            column(DateFilter_Payments; Payments."Date Filter")
+            {
+            }
+            column(ImprestType_Payments; Payments."Imprest Type")
+            {
+            }
+            column(ProjectBudget_Payments; Payments."Project Budget")
+            {
+            }
+            column(UsageCosts_Payments; Payments."Actual Project Costs")
+            {
+            }
+            column(TotalCommitments_Payments; Payments."Total Budget Commitments")
+            {
+            }
+            column(AvailableFunds_Payments; Payments."Available Funds")
+            {
+            }
+            column(Job_Payments; Payments.Job)
+            {
+            }
+            column(JobTaskNo_Payments; Payments."Job Task No")
+            {
+            }
+            column(Number_In_Words; NumberText[1])
+            {
+            }
+            column(PreparedBy; UserSetup."Employee Name")
+            {
+            }
+            column(DatePrepared; ApproverDate[1])
+            {
+            }
+            column(PreparedBy_Signature; UserSetup.Picture)
+            {
+            }
+            column(ExaminedBy; UserSetup1."Employee Name")
+            {
+            }
+            column(DateExamined; ApproverDate[2])
+            {
+            }
+            column(ExaminedBy_Signature; UserSetup1.Picture)
+            {
+            }
+            column(VBC; UserSetup2."Employee Name")
+            {
+            }
+            column(VBCDate; ApproverDate[3])
+            {
+            }
+            column(VBC_Signature; UserSetup2.Picture)
+            {
+            }
+            column(Authorizer; UserSetup3."Employee Name")
+            {
+            }
+            column(DateAuthorized; ApproverDate[4])
+            {
+            }
+            column(Authorizer_Signature; UserSetup3.Picture)
+            {
+            }
+            dataitem("PV Lines"; "Payment Entries")
+            {
+                DataItemLink = No = FIELD("No.");
+                column(Amount_PVLines; Amount)
+                {
+                }
+                column(BankAccountNo_PVLines; "Bank Account No.")
+                {
+                }
+                column(BankBranchNo_PVLines; "Bank Branch No.")
+                {
+                }
+                column(BankCode_PVLines; "Bank Code")
+                {
+                }
+                column(BankName_PVLines; "Bank Name")
+                {
+                }
+                column(BNKAccount_PVLines; "BNK Account")
+                {
+                }
+                column(BranchName_PVLines; "Branch Name")
+                {
+                }
+                column(MpesaMobileNo_PVLines; "Mpesa Mobile No")
+                {
+                }
+                column(NetAmount_PVLines; "Net Amount")
+                {
+                }
+                column(OtherCosts_PVLines; "Other Costs")
+                {
+                }
+                column(PIN_PVLines; PIN)
+                {
+                }
+                column(SystemCreatedAt_PVLines; SystemCreatedAt)
+                {
+                }
+                column(SystemCreatedBy_PVLines; SystemCreatedBy)
+                {
+                }
+                column(SystemId_PVLines; SystemId)
+                {
+                }
+                column(SystemModifiedAt_PVLines; SystemModifiedAt)
+                {
+                }
+                column(SystemModifiedBy_PVLines; SystemModifiedBy)
+                {
+                }
+                column(WTaxAmount_PVLines; "W/Tax Amount")
+                {
+                }
+                column(No_PVLines; "PV Lines".No)
+                {
+                }
+                column(LineNo_PVLines; "PV Lines"."Line No")
+                {
+                }
+                column(Date_PVLines; "PV Lines".Date)
+                {
+                }
+                column(AccountType_PVLines; "PV Lines"."Account Type")
+                {
+                }
+                column(AccountNo_PVLines; "PV Lines"."Account No")
+                {
+                }
+                column(AccountName_PVLines; "PV Lines"."Account Name")
+                {
+                }
+
+            }
+
+            trigger OnAfterGetRecord()
+            begin
+                //Ushindi
+                /*
+                CheckReport.InitTextVariable();
+                CheckReport.FormatNoText(NumberText,TTotal,'');
+                */
+                Payments.CalcFields("Total Net Amount");
+                PaymentMgt.InitTextVariable;
+                PaymentMgt.FormatNoText(NumberText, Payments."Resources Total Amount", CurrencyCodeText);
+                //Approvals
+                ApprovalEntries.Reset;
+                ApprovalEntries.SetRange("Table ID", 57000);
+                ApprovalEntries.SetRange("Document No.", Payments."No.");
+                ApprovalEntries.SetRange(Status, ApprovalEntries.Status::Approved);
+                if ApprovalEntries.Find('-') then begin
+                    i := 0;
+                    repeat
+                        i := i + 1;
+                        if i = 1 then begin
+                            Approver[1] := ApprovalEntries."Sender ID";
+                            ApproverDate[1] := ApprovalEntries."Date-Time Sent for Approval";
+                            if UserSetup.Get(Approver[1]) then
+                                UserSetup.CalcFields(Picture);
+
+                            Approver[2] := ApprovalEntries."Approver ID";
+                            ApproverDate[2] := ApprovalEntries."Last Date-Time Modified";
+                            if UserSetup1.Get(Approver[2]) then
+                                UserSetup1.CalcFields(Picture);
+                        end;
+                        if i = 2 then begin
+                            Approver[3] := ApprovalEntries."Approver ID";
+                            ApproverDate[3] := ApprovalEntries."Last Date-Time Modified";
+                            if UserSetup2.Get(Approver[3]) then
+                                UserSetup2.CalcFields(Picture);
+                        end;
+                        if i = 3 then begin
+                            Approver[4] := ApprovalEntries."Approver ID";
+                            ApproverDate[4] := ApprovalEntries."Last Date-Time Modified";
+                            if UserSetup3.Get(Approver[4]) then
+                                UserSetup3.CalcFields(Picture);
+                        end;
+                    until
+                   ApprovalEntries.Next = 0;
+
+                end;
+
+            end;
+
+            trigger OnPreDataItem()
+            begin
+                Payments.CalcFields(Payments."Bank Name", Payments."Project Description");
+            end;
+        }
+    }
+
+    requestpage
+    {
+
+        layout
+        {
+        }
+
+        actions
+        {
+        }
+    }
+
+    labels
+    {
+    }
+
+    trigger OnInitReport()
+    begin
+        //Ushindi Changes
+        //Indicate Logo
+        CompanyInfo.Get;
+        CompanyInfo.CalcFields(CompanyInfo.Picture);
+    end;
+
+    trigger OnPreReport()
+    begin
+        //Ushindi Changes
+        //Indicate Logo
+        CompanyInfo.Get;
+        CompanyInfo.CalcFields(CompanyInfo.Picture);
+    end;
+
+    var
+        CompanyInfo: Record "Company Information";
+        CheckReport: Report Check;
+        NumberText: array[2] of Text[80];
+        TTotal: Decimal;
+        ApprovalEntries: Record "Approval Entry";
+        Approver: array[10] of Code[50];
+        ApproverDate: array[10] of DateTime;
+        UserSetup: Record "User Setup";
+        UserSetup1: Record "User Setup";
+        UserSetup2: Record "User Setup";
+        UserSetup3: Record "User Setup";
+        i: Integer;
+        PaymentMgt: Codeunit "Payments-Post";
+        CurrencyCodeText: Code[10];
+}
+

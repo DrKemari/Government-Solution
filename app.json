@@ -1,0 +1,33 @@
+{
+  "id": "1b30a5b5-934b-4185-ad3e-329e2240be9a",
+  "name": "GreenComApp",
+  "publisher": "GreenCom",
+  "version": "1.0.2.57",
+  "brief": "Enterprise resource planning (ERP)",
+  "description": "Enterprise resource planning (ERP)",
+  "privacyStatement": "https://greencom.co.ke/",
+  "EULA": "https://greencom.co.ke/",
+  "help": "https://greencom.co.ke/",
+  "url": "https://greencom.co.ke/",
+  "logo": "logo/logo.png",
+  "dependencies": [],
+  "screenshots": [],
+  "platform": "1.0.0.0",
+  "application": "20.0.0.0",
+  "idRanges": [
+    {
+      "from": 50000,
+      "to": 99999
+    }
+  ],
+  "resourceExposurePolicy": {
+    "allowDebugging": true,
+    "allowDownloadingSource": false,
+    "includeSourceInSymbolFile": false
+  },
+  "suppressWarnings":[
+    "AL0118","AL0685","AL0600","AL0697","AL0432","AL0606","AL0603","AL0551","AL0729","AL0482","AL0299","AL0568","AL0273","AL0717","AL0269","AL0545","AL0667","AL0523","AL0743"
+  ],
+  "runtime": "9.0",
+  "target":"OnPrem"
+}

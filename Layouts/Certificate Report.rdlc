@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="ReportForNavId_35">
+          <DataField>ReportForNavId_35</DataField>
+        </Field>
+        <Field Name="Logo">
+          <DataField>Logo</DataField>
+        </Field>
+        <Field Name="name">
+          <DataField>name</DataField>
+        </Field>
+        <Field Name="city">
+          <DataField>city</DataField>
+        </Field>
+        <Field Name="Add2">
+          <DataField>Add2</DataField>
+        </Field>
+        <Field Name="EntryNo_HD">
+          <DataField>EntryNo_HD</DataField>
+        </Field>
+        <Field Name="StudentRegNo_HD">
+          <DataField>StudentRegNo_HD</DataField>
+        </Field>
+        <Field Name="StudentName_HD">
+          <DataField>StudentName_HD</DataField>
+        </Field>
+        <Field Name="Examination_HD">
+          <DataField>Examination_HD</DataField>
+        </Field>
+        <Field Name="Part_HD">
+          <DataField>Part_HD</DataField>
+        </Field>
+        <Field Name="ExamSittingID_HD">
+          <DataField>ExamSittingID_HD</DataField>
+        </Field>
+        <Field Name="ExamCenter_HD">
+          <DataField>ExamCenter_HD</DataField>
+        </Field>
+        <Field Name="DatePrinted_HD">
+          <DataField>DatePrinted_HD</DataField>
+        </Field>
+        <Field Name="PrintedBy_HD">
+          <DataField>PrintedBy_HD</DataField>
+        </Field>
+        <Field Name="CollectionDate_HD">
+          <DataField>CollectionDate_HD</DataField>
+        </Field>
+        <Field Name="CollectedByIDNumber_HD">
+          <DataField>CollectedByIDNumber_HD</DataField>
+        </Field>
+        <Field Name="CollectedByName_HD">
+          <DataField>CollectedByName_HD</DataField>
+        </Field>
+        <Field Name="CollectedByEmail_HD">
+          <DataField>CollectedByEmail_HD</DataField>
+        </Field>
+        <Field Name="IssuedBy_HD">
+          <DataField>IssuedBy_HD</DataField>
+        </Field>
+        <Field Name="IssuedDate_HD">
+          <DataField>IssuedDate_HD</DataField>
+        </Field>
+        <Field Name="IssuedTime_HD">
+          <DataField>IssuedTime_HD</DataField>
+        </Field>
+        <Field Name="Type_HD">
+          <DataField>Type_HD</DataField>
+        </Field>
+        <Field Name="LastModifiedDateTime_HD">
+          <DataField>LastModifiedDateTime_HD</DataField>
+        </Field>
+        <Field Name="LastDateModified_HD">
+          <DataField>LastDateModified_HD</DataField>
+        </Field>
+        <Field Name="CertificateNo_HD">
+          <DataField>CertificateNo_HD</DataField>
+        </Field>
+        <Field Name="Collected_HD">
+          <DataField>Collected_HD</DataField>
+        </Field>
+        <Field Name="StorageAmount_HD">
+          <DataField>StorageAmount_HD</DataField>
+        </Field>
+        <Field Name="StorageAmount_HDFormat">
+          <DataField>StorageAmount_HDFormat</DataField>
+        </Field>
+        <Field Name="Status_HD">
+          <DataField>Status_HD</DataField>
+        </Field>
+        <Field Name="SecurityCode_HD">
+          <DataField>SecurityCode_HD</DataField>
+        </Field>
+        <Field Name="YearCompleted_HD">
+          <DataField>YearCompleted_HD</DataField>
+        </Field>
+        <Field Name="EffeStorageFeeCalcDate_HD">
+          <DataField>EffeStorageFeeCalcDate_HD</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

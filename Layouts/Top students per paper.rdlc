@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="ReportForNavId_1">
+          <DataField>ReportForNavId_1</DataField>
+        </Field>
+        <Field Name="LineNo_RSL">
+          <DataField>LineNo_RSL</DataField>
+        </Field>
+        <Field Name="StudentRegNo_RSL">
+          <DataField>StudentRegNo_RSL</DataField>
+        </Field>
+        <Field Name="Examination_RSL">
+          <DataField>Examination_RSL</DataField>
+        </Field>
+        <Field Name="Part_RSL">
+          <DataField>Part_RSL</DataField>
+        </Field>
+        <Field Name="Section_RSL">
+          <DataField>Section_RSL</DataField>
+        </Field>
+        <Field Name="Paper_RSL">
+          <DataField>Paper_RSL</DataField>
+        </Field>
+        <Field Name="PaperName_RSL">
+          <DataField>PaperName_RSL</DataField>
+        </Field>
+        <Field Name="Type_RSL">
+          <DataField>Type_RSL</DataField>
+        </Field>
+        <Field Name="StudentName_RSL">
+          <DataField>StudentName_RSL</DataField>
+        </Field>
+        <Field Name="Address_RSL">
+          <DataField>Address_RSL</DataField>
+        </Field>
+        <Field Name="Email_RSL">
+          <DataField>Email_RSL</DataField>
+        </Field>
+        <Field Name="NationalIDNo_RSL">
+          <DataField>NationalIDNo_RSL</DataField>
+        </Field>
+        <Field Name="PassportNo_RSL">
+          <DataField>PassportNo_RSL</DataField>
+        </Field>
+        <Field Name="Grade_RSL">
+          <DataField>Grade_RSL</DataField>
+        </Field>
+        <Field Name="SectionGrade_RSL">
+          <DataField>SectionGrade_RSL</DataField>
+        </Field>
+        <Field Name="SectionDescription_RSL">
+          <DataField>SectionDescription_RSL</DataField>
+        </Field>
+        <Field Name="ExaminationSittingID_RSL">
+          <DataField>ExaminationSittingID_RSL</DataField>
+        </Field>
+        <Field Name="FinancialYear_RSL">
+          <DataField>FinancialYear_RSL</DataField>
+        </Field>
+        <Field Name="ExaminationCenter_RSL">
+          <DataField>ExaminationCenter_RSL</DataField>
+        </Field>
+        <Field Name="Mark_RSL">
+          <DataField>Mark_RSL</DataField>
+        </Field>
+        <Field Name="Mark_RSLFormat">
+          <DataField>Mark_RSLFormat</DataField>
+        </Field>
+        <Field Name="DocumentNo_RSL">
+          <DataField>DocumentNo_RSL</DataField>
+        </Field>
+        <Field Name="Passed_RSL">
+          <DataField>Passed_RSL</DataField>
+        </Field>
+        <Field Name="SerialNo_RSL">
+          <DataField>SerialNo_RSL</DataField>
+        </Field>
+        <Field Name="SubC_RSL">
+          <DataField>SubC_RSL</DataField>
+        </Field>
+        <Field Name="Fc_RSL">
+          <DataField>Fc_RSL</DataField>
+        </Field>
+        <Field Name="IssueDate_RSL">
+          <DataField>IssueDate_RSL</DataField>
+        </Field>
+        <Field Name="COMP">
+          <DataField>COMP</DataField>
+        </Field>
+        <Field Name="LOGO">
+          <DataField>LOGO</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>
